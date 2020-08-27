@@ -1,6 +1,6 @@
 ## Pharmacy As A Service
 
-PAAS hace fullfilment white label de medicamentos permitiéndo la monetización farmacéutica sin tener una farmacia, realizar un envío, procesar un pago ni tener un permiso. 
+PAAS hace fullfilment white label de medicamentos permitiéndo la monetización farmacéutica sin tener una farmacia, realizar un envío, procesar un pago ni tener un permiso. **No competimos contra nuestros clientes**, cada checkout es único y el paciente solo puede comprar a través de el.
 
 El proyecto está en desarrollo
 
@@ -21,23 +21,26 @@ Autentica tu request agregando el header `Paas-Api-Key` con tu api key.
 El cuerpo de la petición tiene que ser `application/json`.
 #### Generar un checkout
 `POST "/generateCheckout"` con el siguiente objeto.
-`{
+```
+{
   "email": <String: Obligatorio>,
   "line_items": <[Object Array]: Obligatorio> [
     ...
     {
       "ean": <String>,
       "quantity": <Integer>
-    }
+    },
     ...
   ]
+```
+##### Ejemplo
 ```
 POST "/generateCheckout"
 {
   "email": "jane@doe.com",
   "line_items": [
     {
-      "ean": 12345678911
+      "ean": "12345678911",
       "quantity": 2
     }
   ]
