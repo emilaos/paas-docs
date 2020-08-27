@@ -1,37 +1,48 @@
-## Welcome to GitHub Pages
+## Pharmacy As A Service
 
-You can use the [editor on GitHub](https://github.com/emilaos/paas-docs/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+PAAS hace fullfilment white label de medicamentos permitiéndo la monetización farmacéutica sin tener una farmacia, realizar un envío, procesar un pago ni tener un permiso. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+El proyecto está en desarrollo
 
-### Markdown
+### Docs
+#### De cero a farmacia en 1, 2, 3.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Simple. Haces un POST request usando tu api key como método de autenticación, el servicio te regresa un checkout único para tu cliente. Cuando tu cliente hace un pedido la utilidad se regitra en tu cuenta como saldo por liberar. Una vez que se realiza el pago los fondos se liberan y puedes retirar tu saldo.
 
-```markdown
-Syntax highlighted code block
+##### ¿Cómo libero mis fondos? ¿Cómo se mi saldo? ¿Puedo hacer un checkout sin hacer un request?
+Si, todo lo puedes hacer desde tu dashboard.
 
-# Header 1
-## Header 2
-### Header 3
+##### ¡Falta una funcionalidad clave!
+No hay problema, vivimos por nuestos clientes ¿Falta desarrollar algo? Lo hacemos :)
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+#### Endpoint, Auth y Headers
+El endpoint es `https://us-central1-paas-e9dd6.cloudfunctions.net/`.
+Autentica tu request agregando el header `Paas-Api-Key` con tu api key.
+El cuerpo de la petición tiene que ser `application/json`.
+#### Generar un checkout
+`POST "/generateCheckout"` con el siguiente objeto.
+`{
+  "email": <String: Obligatorio>,
+  "line_items": <[Object Array]: Obligatorio> [
+    ...
+    {
+      "ean": <String>,
+      "quantity": <Integer>
+    }
+    ...
+  ]
+```
+POST "/generateCheckout"
+{
+  "email": "jane@doe.com",
+  "line_items": [
+    {
+      "ean": 12345678911
+      "quantity": 2
+    }
+  ]
+}
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/emilaos/paas-docs/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Soporte
+Contáctanos. Estamos a un click de distancia.
