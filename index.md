@@ -9,7 +9,7 @@ El proyecto está en desarrollo
 
 Simple. Haces un POST request usando tu api key como método de autenticación, el servicio te regresa un checkout único para tu cliente. Cuando tu cliente hace un pedido la utilidad se regitra en tu cuenta como saldo por liberar. Una vez que se realiza el pago los fondos se liberan y puedes retirar tu saldo.
 
-##### ¿Cómo libero mis fondos? ¿Cómo se mi saldo? ¿Puedo hacer un checkout sin hacer un request?
+##### ¿Cómo libero mis fondos? ¿Cómo veo mi saldo? ¿Puedo hacer un checkout sin hacer un request?
 Si, todo lo puedes hacer desde tu dashboard.
 
 ##### ¡Falta una funcionalidad clave!
