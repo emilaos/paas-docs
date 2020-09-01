@@ -22,7 +22,7 @@ El cuerpo de la petición tiene que ser `application/json`.
 ```
 {
   "email": <String: Obligatorio>,
-  "line_items": <[Object Array]: Obligatorio> [
+  "lineItems": <[Object Array]: Obligatorio> [
     {
       "ean": <String>,
       "quantity": <Integer>
@@ -36,7 +36,7 @@ El cuerpo de la petición tiene que ser `application/json`.
 POST "/generateCheckout"
 {
   "email": "jane@doe.com",
-  "line_items": [
+  "lineItems": [
     {
       "ean": "1001",
       "quantity": 2
