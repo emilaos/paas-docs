@@ -47,14 +47,14 @@ POST "/generateCheckout"
 #### Transacciones de prueba
 Puedes simular transacciones con un checkout creado en el entorno de desarrollo, para hacer eso usa estos datos al momento del pago:
 
-| Campo                | Valor                   |
-|----------------------|-------------------------|
-| Nombre               | Bogus Gateway           |
-| Numero exitoso       | 1                       |
-| Numero con error     | 2                       |
-| Numero con excepcion | 3                       |
-| Fecha                | Cualquiera en el futuro |
-| CVV                  | Cualquiera 3 digitos    |
+|              Campo              |          Valor          |
+|:-------------------------------:|:-----------------------:|
+| Nombre                          |      Bogus Gateway      |
+| Numero para **transaccion exitosa** |            1            |
+| Numero para **obtener error**       |            2            |
+| Numero para **obtener excepcion**   |            3            |
+| Fecha                           | Cualquiera en el futuro |
+| CVV                             |  Cualesquiera 3 digitos |
 
 ### Soporte
 Contáctanos. Estamos a un click de distancia.
