@@ -1,6 +1,6 @@
 ## Pharmacy As A Service
 
-PAAS hace fullfilment white label de medicamentos, permitiéndo la monetización farmacéutica sin tener una farmacia, realizar un envío, procesar un pago ni tener un permiso. **No competimos contra nuestros clientes**, cada checkout es único y el paciente solo puede comprar a través de el.
+PAAS hace fulfilment white label de medicamentos, permitiéndo la monetización farmacéutica sin tener una farmacia, realizar un envío, procesar un pago ni tener un permiso. **No competimos contra nuestros clientes**, cada checkout es único y el paciente solo puede comprar a través de el.
 
 ### Docs
 #### De cero a farmacia en 1, 2, 3.
@@ -44,6 +44,15 @@ POST "/generateCheckout"
   ]
 }
 ```
-
+#### Transacciones de prueba
+Puedes simular transacciones con un checkout creado en el entorno de desarrollo, para hacer eso usa estos datos al momento del pago:
+**Nombre en la tarjeta** `Bogus Gateway`
+**Número de la tarjeta de crédito**
+Inserta cada uno de estos datos a la vez para simular diferentes tipos de transacciones:
+    Presiona 1 para simular una transacción aprobada
+    Presiona 2 para simular un error en la transacción
+    Presiona 3 para simular una excepción (esto genera un mensaje que indica que ocurrió un error con el proveedor de servicios)
+**CVV** Inserta cualquier número de 3 dígitos (por ejemplo, 111.)
+**Fecha de vencimiento** Inserta cualquier fecha en el futuro.
 ### Soporte
 Contáctanos. Estamos a un click de distancia.
