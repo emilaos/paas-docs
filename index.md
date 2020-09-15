@@ -24,12 +24,27 @@ El cuerpo de la petición tiene que ser `application/json`.
   "email": <String: Obligatorio>,
   "lineItems": <[Object Array]: Obligatorio> [
     {
-      "ean": <String>,
-      "quantity": <Integer>
+      "ean": <String: Obligatorio>,
+      "quantity": <Integer: Obligatorio>
     },
     ...
   ]
 }
+```
+Opcionalmente, se puede mandar el objeto de dirección en el cuerpo de la petición. Que aunque de momento no es funcional, lo será en unas semanas. Para mandar el objeto address, todos sus campos son obligatorios.
+```
+"address": {
+  address1: <String>,
+  address2: <String>,
+  city: <String>,
+  company: <String>,
+  country: <String>,
+  firstName: <String>,
+  lastName: <String>,
+  phone: <String>,
+  province: <String>,
+  zip: <String>
+ }
 ```
 ##### Ejemplo
 ```
