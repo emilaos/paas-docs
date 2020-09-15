@@ -35,15 +35,15 @@ Opcionalmente, se puede mandar el objeto de dirección en el cuerpo de la petici
 ```
 "address": {
   "address1": <String>,
-"address2": <String>,
-"city": <String>,
-"company": <String>,
-"country": <String>,
-"firstName": <String>,
-"lastName": <String>,
-"phone": <String>,
-"province": <String>,
-"zip": <String>
+  "address2": <String>,
+  "city": <String>,
+  "company": <String>,
+  "country": <String>,
+  "firstName": <String>,
+  "lastName": <String>,
+  "phone": <String>,
+  "province": <String>,
+  "zip": <String>
  }
 ```
 ##### Ejemplo
