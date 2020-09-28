@@ -38,7 +38,7 @@ Opcionalmente, se puede mandar el objeto de dirección en el cuerpo de la petici
   "address2": <String>,
   "city": <String: Obligatorio>,
   "province": <String: Obligatorio (Estado)>,
-  "zip": <String>,
+  "zip": <String: Obligatorio>,
   "firstName": <String: Obligatorio>,
   "lastName": <String: Obligatorio>,
   "phone": <String: Obligatorio formato E.164. Ej, +5255...>
