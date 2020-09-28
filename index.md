@@ -31,19 +31,17 @@ El cuerpo de la petición tiene que ser `application/json`.
   ]
 }
 ```
-Opcionalmente, se puede mandar el objeto de dirección en el cuerpo de la petición. Que aunque de momento no es funcional, lo será en unas semanas. Para mandar el objeto address, todos sus campos son obligatorios.
+Opcionalmente, se puede mandar el objeto de dirección en el cuerpo de la petición. Que aunque de momento no es funcional, lo será en unas semanas. Para mandar el objeto address, algunos de campos son obligatorios. **El campo `province` debe der ser un estado dentro de México**.
 ```
 "address": {
-  "address1": <String>,
+  "address1": <String: Obligatorio>,
   "address2": <String>,
-  "city": <String>,
-  "company": <String>,
-  "country": <String>,
-  "firstName": <String>,
-  "lastName": <String>,
-  "phone": <String>,
-  "province": <String>,
-  "zip": <String>
+  "city": <String: Obligatorio>,
+  "province": <String: Obligatorio (Estado)>,
+  "zip": <String>,
+  "firstName": <String: Obligatorio>,
+  "lastName": <String: Obligatorio>,
+  "phone": <String: Obligatorio formato E.164. Ej, +5255...>
  }
 ```
 ##### Ejemplo
