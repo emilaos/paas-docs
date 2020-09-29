@@ -57,6 +57,18 @@ POST "/generateCheckout"
   ]
 }
 ```
+##### Respuesta
+El método de crear checkout regresa el siguiente objeto. Cada checkout creado tiene un ID que se relaciona con una orden si el cliente realiza un pedido.
+```
+{
+  "lineItems": <[Object Array]: Eans y cantidades>,
+  "url": <String: Url del checkout>,
+  "token": <String: Id único del checkout>,
+  "total": <Float: Monto total a pagar antes de envío>,
+  "state": <String: Estado del checkout>,
+  "email": <String: email del cliente>
+}
+```
 #### Transacciones de prueba
 Puedes simular transacciones con un checkout creado en el entorno de desarrollo, para hacer eso usa estos datos al momento del pago:
 
@@ -69,5 +81,13 @@ Puedes simular transacciones con un checkout creado en el entorno de desarrollo,
 | Fecha                           | Cualquiera en el futuro |
 | CVV                             |  Cualesquiera 3 digitos |
 
+#### Webhooks
+Opcionalmente puedes configurar 4 webhooks que le avisaran a tu backend cuando ocurran eventos relevantes. Estos son:
+* Nueva orden.
+* Orden pagada.
+* Orden surtida.
+* Orden cancelada.
+
+
 ### Soporte
-Contáctanos. Estamos a un click de distancia.
+Contáctanos en paas.mx. Estamos a un click de distancia.
