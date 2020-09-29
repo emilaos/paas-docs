@@ -61,7 +61,6 @@ POST "/generateCheckout"
 El método de crear checkout regresa el siguiente objeto. Cada checkout creado tiene un ID que se relaciona con una orden si el cliente realiza un pedido.
 ```
 {
-  "lineItems": <[Object Array]: Eans y cantidades>,
   "url": <String: Url del checkout>,
   "token": <String: Id único del checkout>,
   "total": <Float: Monto total a pagar antes de envío>,
