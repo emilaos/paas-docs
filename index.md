@@ -64,7 +64,8 @@ El método de crear checkout regresa el siguiente objeto. Cada checkout creado t
   "token": <String: Id único del checkout>,
   "total": <Float: Monto total a pagar antes de envío>,
   "state": <String: Estado del checkout>,
-  "email": <String: email del cliente>
+  "email": <String: email del cliente>,
+  "emailSentSuccessfully": <Boolean: Solo se regresara si se mando la bandera sendCheckoutByEmail>
 }
 ```
 #### Transacciones de prueba
