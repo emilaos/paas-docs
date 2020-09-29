@@ -28,22 +28,21 @@ El cuerpo de la petición tiene que ser `application/json`.
       "quantity": <Integer: Obligatorio>
     },
     ...
-  ]
+  ],
+  "sendCheckoutByEmail": <Boolean: Opcional>,
+  "address": <Object: Opcional> {
+    "address1": <String: Obligatorio>,
+    "address2": <String>,
+    "city": <String: Obligatorio>,
+    "province": <String: Obligatorio (Estado)>,
+    "zip": <String: Obligatorio>,
+    "firstName": <String: Obligatorio>,
+    "lastName": <String: Obligatorio>,
+    "phone": <String: Obligatorio formato E.164. Ej, +5255...>
+   }
 }
 ```
-Opcionalmente, se puede mandar el objeto de dirección en el cuerpo de la petición. Que aunque de momento no es funcional, lo será en unas semanas. Para mandar el objeto address, algunos de campos son obligatorios. **El campo `province` debe der ser un estado dentro de México**.
-```
-"address": {
-  "address1": <String: Obligatorio>,
-  "address2": <String>,
-  "city": <String: Obligatorio>,
-  "province": <String: Obligatorio (Estado)>,
-  "zip": <String: Obligatorio>,
-  "firstName": <String: Obligatorio>,
-  "lastName": <String: Obligatorio>,
-  "phone": <String: Obligatorio formato E.164. Ej, +5255...>
- }
-```
+_Opcionalmente_ se puede mandar el objeto de `address` y la bandera de `sendCheckoutByEmail` en el cuerpo de la petición. Para mandar el objeto de dirección algunos de campos son obligatorios y es importante notar que **el campo `province` debe der ser un estado dentro de México**. La bandera `sendCheckoutByEmail` le enviará por correo el checkout al cliente si su valor es `true`.
 ##### Ejemplo
 ```
 POST "/generateCheckout"
