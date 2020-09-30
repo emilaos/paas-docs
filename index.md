@@ -83,7 +83,7 @@ Puedes simular transacciones con un checkout creado en el entorno de desarrollo,
 | CVV                             |  Cualesquiera 3 digitos |
 
 ## Webhooks
-Opcionalmente puedes configurar 4 webhooks que le avisaran a tu backend cuando ocurran eventos relevantes. Estos son:
+Opcionalmente puedes configurar 4 webhooks desde tu dashboard que le avisan a tu backend cuando ocurran eventos relevantes.
 * Nueva orden.
 * Orden pagada.
 * Orden surtida.
