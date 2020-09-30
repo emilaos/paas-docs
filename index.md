@@ -86,7 +86,43 @@ Opcionalmente puedes configurar 4 webhooks que le avisaran a tu backend cuando o
 * Orden pagada.
 * Orden surtida.
 * Orden cancelada.
+Los webhooks llegan autenticados con el header `Paas-Api-Key` con el api key del ambiente que recibio los eventos.
+##### Payloads
+###### Nueva orden
+```
+{
+  "email": <String: Correo del cliente>,
+  "id": <String: Id de la orden>,
+  "margin": <Float: Margen que se genero>,
+  "status": <String: Status de la orden, puede ser "paid" o "open">,
+  "token": <String: Token del carrito>,
+  "total": <Float: Precio total de la orden>,
+  "url": <String: Url de seguimiento de la orden>
+}
+```
+###### Orden pagada
+```
+{
+  "id": <String: Id de la orden>,
+  "margin": <Float: Margen que se genero>,
+  "status": "paid"
+}
+```
 
+###### Orden surtida
+```
+{
+  "id": <String: Id de la orden surtida>,
+  "status": "completed"
+}
+```
 
+###### Orden cancelada
+```
+{
+  "id": <String: Id de la orden cancelada>,
+  "status": "canceled"
+}
+```
 ### Soporte
 Contáctanos en paas.mx. Estamos a un click de distancia.
