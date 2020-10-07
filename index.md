@@ -132,3 +132,41 @@ Los webhooks llegan autenticados con el header `Paas-Api-Key` con el api key del
 ```
 ## Soporte
 Contáctanos en paas.mx. Estamos a un click de distancia.
+
+## Datos para el campo province
+Estos son los estados o claves que podemos recibir en el campo `province` del objeto `address` para generar el checkout. Podemos mandar el nombre del estado o la clave.
+
+| Estado              | Clave |
+|---------------------|-------|
+| Aguascalientes      | AGS   |
+| Baja California     | BC    |
+| Baja California Sur | BCS   |
+| Campeche            | CAMP  |
+| Chiapas             | CHIS  |
+| Chihuahua           | CHIH  |
+| Ciudad de México    | DF    |
+| Coahuila            | COAH  |
+| Colima              | COL   |
+| Durango             | DGO   |
+| Guanajuato          | GTO   |
+| Guerrero            | GRO   |
+| Hidalgo             | HGO   |
+| Jalisco             | JAL   |
+| México              | MEX   |
+| Michoacán           | MICH  |
+| Morelos             | MOR   |
+| Nayarit             | NAY   |
+| Nuevo León          | NL    |
+| Oaxaca              | OAX   |
+| Puebla              | PUE   |
+| Querétaro           | QRO   |
+| Quintana Roo        | Q ROO |
+| San Luis Potosí     | SLP   |
+| Sinaloa             | SIN   |
+| Sonora              | SON   |
+| Tabasco             | TAB   |
+| Tamaulipas          | TAMPS |
+| Tlaxcala            | TLAX  |
+| Veracruz            | VER   |
+| Yucatán             | YUC   |
+| Zacatecas           | ZAC   |
