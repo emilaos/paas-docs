@@ -130,6 +130,9 @@ Los webhooks llegan autenticados con el header `Paas-Api-Key` con el api key del
   "status": "canceled"
 }
 ```
+## Catalogo de productos
+El catalogo de productos puede ser retribuido usando Algolia. Mándanos un correo para compartirte el Api Key.
+
 ## Soporte
 Contáctanos en paas.mx. Estamos a un click de distancia.
 
