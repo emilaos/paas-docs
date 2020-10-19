@@ -133,6 +133,22 @@ Los webhooks llegan autenticados con el header `Paas-Api-Key` con el api key del
 ## Catalogo de productos
 El catalogo de productos puede ser retribuido usando Algolia. Mándanos un correo para compartirte el Api Key.
 
+## Acceder a la info de un checkout o una orden
+Podemos acceder a la info de un checkout o una order haciendo una peticion con el token del checkout o el id de la orden.
+### Info de un checkout
+```
+GET "/getCheckout"
+{
+  "token": <String: Obligatorio>
+}
+```
+### Info de una orden
+```
+GET "/getOrder"
+{
+  "orderId": <String: Obligatorio>
+}
+```
 ## Soporte
 Contáctanos en paas.mx. Estamos a un click de distancia.
 
