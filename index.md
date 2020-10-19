@@ -137,17 +137,11 @@ El catalogo de productos puede ser retribuido usando Algolia. Mándanos un corre
 Podemos acceder a la info de un checkout o una order haciendo una peticion con el token del checkout o el id de la orden.
 ### Info de un checkout
 ```
-GET "/getCheckout"
-{
-  "token": <String: Obligatorio>
-}
+GET "/getCheckout/:token"
 ```
 ### Info de una orden
 ```
-GET "/getOrder"
-{
-  "orderId": <String: Obligatorio>
-}
+GET "/getOrder/:id"
 ```
 ## Soporte
 Contáctanos en paas.mx. Estamos a un click de distancia.
