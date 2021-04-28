@@ -126,7 +126,7 @@ Los webhooks llegan autenticados con el header `Paas-Api-Key` con el api key del
   "status": "completed",
   "fulfilledItems": <Array: Productos surtidos> {
     "ean": <String: Ean del producto>,
-        "name": <String: Nombre del producto>,
+    "name": <String: Nombre del producto>,
     "quantity: <Int: Cantidad surtida>
   }
 }
