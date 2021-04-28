@@ -89,7 +89,11 @@ Opcionalmente puedes configurar 4 webhooks desde tu dashboard que le avisan a tu
 * Orden surtida.
 * Orden cancelada.
 
-Los webhooks llegan autenticados con el header `Paas-Api-Key` con el api key del ambiente que recibio los eventos.
+Los webhooks llegan autenticados con el header `Paas-Api-Key` con el api key del ambiente que recibio los eventos y tienen el siguiente cuerpo que los identifica:
+* Recuerda, cada checkout que creas genera un *token*. Ese token es un id generado aleatoriamente. Al realizarce una orden, se genera un id numerado.
+* El webhook de **nueva orden** incluye en el cuerpo de la peticion el token que genero esta orden y el ID de la orden que servira para identificar los webhooks siguientes.
+* El webhook de **orden surtida** incluye los productos surtidos dentro del cuerpo de la peticion.
+
 
 ### Payloads
 
@@ -119,7 +123,12 @@ Los webhooks llegan autenticados con el header `Paas-Api-Key` con el api key del
 ```
 {
   "id": <String: Id de la orden surtida>,
-  "status": "completed"
+  "status": "completed",
+  "fulfilledItems": <Array: Productos surtidos> {
+    "ean": <String: Ean del producto>,
+        "name": <String: Nombre del producto>,
+    "quantity: <Int: Cantidad surtida>
+  }
 }
 ```
 
